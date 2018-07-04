@@ -1,10 +1,13 @@
+#ifndef Employee_h
+#define Employee_h
+
 class Employee
 {
 public:
   Employee(const char*, const char*, int, int);
   Employee(const Employee&);
   ~Employee();
-  Emplooyee& operator=(const Empoyee&);
+  Employee& operator=(const Employee&);
 
   char* getName() const;
   char* getAddress() const;
@@ -22,9 +25,12 @@ private:
   char* name;
   char* address;
   int birthYear;
-  int expereince;
+  int experience;
 
-  void copyEmployee(const University&);
+  void copyEmployee(const Employee&);
   void deleteEmployee();
-  void copyDynamicMemoryString(char*, char*);
+  void copyDynamicMemoryString(char*&, const char*);
+  int getCurrentYear() const;
 };
+
+#endif // Employee_h

@@ -10,8 +10,9 @@ const int STARTING_YEAR = 1900;
 
 Employee::Employee(const char* name, const char* address, int birthYear, int experience, double salary)
 {
-  assert(strlen(name) != 0);
-  assert(strlen(address) != 0);
+  int employeeNameLength = strlen(name), employeeAddressLength = strlen(address);
+  assert(employeeNameLength > 0);
+  assert(employeeAddressLength > 0);
 
   copyDynamicMemoryString(this->name, name);
   copyDynamicMemoryString(this->address, address);

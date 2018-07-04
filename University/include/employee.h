@@ -22,16 +22,18 @@ public:
   int calculateAge() const;
   virtual void increaseAnnualSalary() = 0;
 
+protected:
+  double salary;
+  void copyDynamicMemoryString(char*&, const char*);
+
 private:
   char* name;
   char* address;
   int birthYear;
   int experience;
-  double salary;
 
   void copyEmployee(const Employee&);
   void deleteEmployee();
-  void copyDynamicMemoryString(char*&, const char*);
   int getCurrentYear() const;
 };
 

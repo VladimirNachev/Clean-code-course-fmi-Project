@@ -8,7 +8,7 @@ using namespace std;
 
 const int STARTING_YEAR = 1900;
 
-Employee::Employee(const char* name, const char* address, int birthYear, int experience)
+Employee::Employee(const char* name, const char* address, int birthYear, int experience, double salary)
 {
   assert(strlen(name) != 0);
   assert(strlen(address) != 0);
@@ -17,6 +17,7 @@ Employee::Employee(const char* name, const char* address, int birthYear, int exp
   copyDynamicMemoryString(this->address, address);
   this->birthYear = birthYear;
   this->experience = experience;
+  this->salary = salary;
 }
 
 Employee::Employee(const Employee &otherEmployee)
@@ -48,6 +49,11 @@ char* Employee::getName() const
 char* Employee::getAddress() const
 {
   return (char*)address;
+}
+
+double Employee::getSalary() const
+{
+  return salary;
 }
 
 int Employee::getBirthYear() const
@@ -98,6 +104,7 @@ void Employee::copyEmployee(const Employee &otherEmployee)
   copyDynamicMemoryString(address, otherEmployee.address);
   birthYear = otherEmployee.birthYear;
   experience = otherEmployee.experience;
+  salary = otherEmployee.salary;
 }
 
 void Employee::deleteEmployee()

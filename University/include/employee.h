@@ -4,7 +4,7 @@
 class Employee
 {
 public:
-  Employee(const char*, const char*, int, int);
+  Employee(const char*, const char*, int, int, double);
   Employee(const Employee&);
   ~Employee();
   Employee& operator=(const Employee&);
@@ -13,6 +13,7 @@ public:
   char* getAddress() const;
   int getBirthYear() const;
   int getExpereince() const;
+  double getSalary() const;
 
   void setName(const char*);
   void setAddress(const char*);
@@ -26,6 +27,7 @@ private:
   char* address;
   int birthYear;
   int experience;
+  double salary;
 
   void copyEmployee(const Employee&);
   void deleteEmployee();

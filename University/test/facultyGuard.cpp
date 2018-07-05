@@ -2,9 +2,6 @@
 #include "../include/facultyGuard.h"
 #include<cstring>
 
-#include<iostream>
-using namespace std;
-
 TEST_CASE("FacultyGuard class - faculty guard can be created")
 {
   FacultyGuard facultyGuard("Dimitar Ivanov", "Varna", 1965, 35, 1777.7, true);

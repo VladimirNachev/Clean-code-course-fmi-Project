@@ -34,10 +34,13 @@
 		</Compiler>
 		<Unit filename="include/catch.hpp" />
 		<Unit filename="include/employee.h" />
+		<Unit filename="include/facultyGuard.h" />
 		<Unit filename="include/lecturer.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/employee.cpp" />
+		<Unit filename="src/facultyGuard.cpp" />
 		<Unit filename="src/lecturer.cpp" />
+		<Unit filename="test/facultyGuard.cpp" />
 		<Unit filename="test/lecturer.cpp" />
 		<Extensions>
 			<code_completion />

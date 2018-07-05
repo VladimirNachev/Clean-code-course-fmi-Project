@@ -4,8 +4,6 @@
 #include<string>
 #include<cassert>
 
-#include<iostream> //TO_BE_DELETED
-
 using namespace std;
 
 int defaultDisciplinesCount = 7;

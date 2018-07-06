@@ -4,6 +4,7 @@
 class Speciality
 {
 public:
+  Speciality();
   Speciality(const char*, int, int, char**);
   Speciality(const Speciality&);
   ~Speciality();

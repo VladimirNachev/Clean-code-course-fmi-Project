@@ -4,6 +4,7 @@
 class Employee
 {
 public:
+  Employee();
   Employee(const char*, const char*, int, int, double);
   Employee(const Employee&);
   ~Employee();

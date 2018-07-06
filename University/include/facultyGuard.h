@@ -5,6 +5,7 @@
 class FacultyGuard : public Employee
 {
 public:
+  FacultyGuard();
   FacultyGuard(const char*, const char*, int, int, double, bool);
   FacultyGuard(const FacultyGuard&);
   ~FacultyGuard();

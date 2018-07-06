@@ -6,6 +6,12 @@
 using namespace std;
 
 const int FACULTY_GUARD_ANNUAL_SALARY_INCREASE = 150;
+const bool DEFAULT_ELIGIBILITY_STATUS = false;
+
+FacultyGuard::FacultyGuard() : Employee()
+{
+  isEligibleToWearGun = DEFAULT_ELIGIBILITY_STATUS;
+}
 
 FacultyGuard::FacultyGuard(const char* name, const char* address, int birthYear, int experience, double salary, bool isEligibleToWearGun) :
   Employee(name, address, birthYear, experience, salary)

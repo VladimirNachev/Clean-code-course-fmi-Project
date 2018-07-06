@@ -7,6 +7,12 @@
 using namespace std;
 
 const int LECTURER_ANNUAL_SALARY_INCREASE = 350;
+const char DEFAULT_ACADEMIC_RANK[7] = { 'd', 'o', 'c', 'e', 'n', 't', '\0' };
+
+Lecturer::Lecturer() : Employee()
+{
+  copyDynamicMemoryString(academicRank, DEFAULT_ACADEMIC_RANK);
+}
 
 Lecturer::Lecturer(const char* name, const char* address, int birthYear, int experience, double salary, const char* academicRank) :
   Employee(name, address, birthYear, experience, salary)

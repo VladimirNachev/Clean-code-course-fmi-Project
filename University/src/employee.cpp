@@ -7,12 +7,28 @@
 using namespace std;
 
 const int STARTING_YEAR = 1900;
+const int DEFAULT_NAME_LENGTH = 12;
+const int DEFAULT_ADDRESS_LENGTH = 6;
+const char DEFAULT_EMPLOYEE_NAME[DEFAULT_NAME_LENGTH] = { 'I', 'v', 'a', 'n', ' ' , 'I', 'v', 'a', 'n', 'o', 'v', '\0' };
+const char DEFAULT_EMPLOYEE_ADDRESS[DEFAULT_ADDRESS_LENGTH] = { 'S', 'o', 'f', 'i', 'a', '\0' };
+const int DEFAULT_BIRTHDAY_YEAR = 1980;
+const int DEFAULT_EXPERIENCE = 15;
+
+Employee::Employee()
+{
+  copyDynamicMemoryString(name, DEFAULT_EMPLOYEE_NAME);
+  copyDynamicMemoryString(address, DEFAULT_EMPLOYEE_ADDRESS);
+  birthYear = DEFAULT_BIRTHDAY_YEAR;
+  experience = DEFAULT_EXPERIENCE;
+}
 
 Employee::Employee(const char* name, const char* address, int birthYear, int experience, double salary)
 {
   int employeeNameLength = strlen(name), employeeAddressLength = strlen(address);
   assert(employeeNameLength > 0);
   assert(employeeAddressLength > 0);
+  assert(birthYear > 0);
+  assert(experience >= 0);
 
   copyDynamicMemoryString(this->name, name);
   copyDynamicMemoryString(this->address, address);

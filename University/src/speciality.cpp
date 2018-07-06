@@ -7,6 +7,14 @@ using namespace std;
 
 const int MAX_NUMBER_OF_DISCIPLINES = 60;
 
+Speciality::Speciality()
+{
+  name = NULL;
+  enrolledPeopleMaxCount = 0;
+  disciplinesCount = 0;
+  disciplines = NULL;
+}
+
 Speciality::Speciality(const char* name, int enrolledPeopleMaxCount, int disciplinesCount, char** disciplines)
 {
   int lengthOfName = strlen(name);

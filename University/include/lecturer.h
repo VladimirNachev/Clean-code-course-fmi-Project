@@ -5,6 +5,7 @@
 class Lecturer : public Employee
 {
 public:
+  Lecturer();
   Lecturer(const char*, const char*, int, int, double, const char*);
   Lecturer(const Lecturer&);
   ~Lecturer();

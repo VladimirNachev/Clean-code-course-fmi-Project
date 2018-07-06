@@ -44,6 +44,7 @@
 		<Unit filename="src/facultyGuard.cpp" />
 		<Unit filename="src/lecturer.cpp" />
 		<Unit filename="src/speciality.cpp" />
+		<Unit filename="test/faculty.cpp" />
 		<Unit filename="test/facultyGuard.cpp" />
 		<Unit filename="test/lecturer.cpp" />
 		<Unit filename="test/speciality.cpp" />

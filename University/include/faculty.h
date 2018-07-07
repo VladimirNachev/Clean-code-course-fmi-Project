@@ -7,6 +7,7 @@
 class Faculty
 {
 public:
+  Faculty();
   Faculty(const char*, int, int, int, Lecturer*, FacultyGuard*, Speciality*);
   Faculty(const Faculty&);
   ~Faculty();

@@ -9,6 +9,17 @@ const int MAX_LECTURERS_COUNT = 1024;
 const int MAX_FACULTY_GUARDS_COUNT = 128;
 const int MAX_SPECIALITIES_COUNT = 1024;
 
+Faculty::Faculty()
+{
+  name = NULL;
+  lecturersCount = 0;
+  facultyGuardsCount = 0;
+  specialitiesCount = 0;
+  lecturers = NULL;
+  facultyGuards = NULL;
+  specialities = NULL;
+}
+
 Faculty::Faculty(const char* name, int lecturersCount, int facultyGuardsCount, int specialitiesCount, Lecturer* lecturers,
                  FacultyGuard* facultyGuards, Speciality* specialities)
 {
@@ -91,6 +102,7 @@ void Faculty::setName(const char* name)
     cerr << "Error ! The name of the faculty can not be empty string !" << endl;
     return;
   }
+  delete this->name;
   copyDynamicMemoryString(this->name, name);
 }
 
@@ -128,7 +140,7 @@ void Faculty::setSpecialities(int specialititesCount, const Speciality* speciali
     return;
   }
 
-  delete [] specialitites;
+  delete [] this->specialities;
   this->specialitiesCount = specialititesCount;
   copySpecialities(this->specialities, specialitites, specialititesCount);
 }

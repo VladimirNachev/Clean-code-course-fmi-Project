@@ -223,17 +223,6 @@ void Faculty::removeSpeciality(const char* specialityName)
   cerr << "Error ! There is no speciality named " << specialityName << " !" << endl;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 void Faculty::copyFaculty(const Faculty &otherFaculty)
 {
   copyDynamicMemoryString(name, otherFaculty.name);

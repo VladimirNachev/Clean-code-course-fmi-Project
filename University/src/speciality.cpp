@@ -117,6 +117,11 @@ void Speciality::setDisciplines(int disciplinesCount, char** disciplines)
   copyDisciplines(disciplinesCount, disciplines);
 }
 
+/** @brief Function which adds discipline to the current speciality.
+ *
+ * @param discipline is the discipline which is going to be added to the current speciality
+ */
+
 void Speciality::addDiscipline(const char* discipline)
 {
   int disciplineLength = strlen(discipline);
@@ -137,6 +142,10 @@ void Speciality::addDiscipline(const char* discipline)
   disciplinesCount++;
 }
 
+/** @brief Function which removes discipline from the current speciality.
+ *
+ * @param discipline is the discipline which is going to be removed from the current speciality
+ */
 void Speciality::removeDiscipline(const char* discipline)
 {
   for (int disciplineIndex = 0; disciplineIndex < disciplinesCount; disciplineIndex++)

@@ -145,6 +145,10 @@ void Faculty::setSpecialities(int specialititesCount, const Speciality* speciali
   copySpecialities(this->specialities, specialitites, specialititesCount);
 }
 
+/** @brief Function which adds a new lecturer to current faculty.
+ *
+ * @param lecturer is the lecturer to be added to current faculty
+ */
 void Faculty::addLecturer(const Lecturer &lecturer)
 {
   if (lecturersCount + 1 > MAX_LECTURERS_COUNT)
@@ -156,6 +160,10 @@ void Faculty::addLecturer(const Lecturer &lecturer)
   lecturers[lecturersCount++] = lecturer;
 }
 
+/** @brief Function which adds a new faculty guard to current faculty.
+ *
+ * @param facultyGuard is the faculty guard to be added to current faculty
+ */
 void Faculty::addFacultyGuard(const FacultyGuard &facultyGuard)
 {
   if (facultyGuardsCount + 1 > MAX_FACULTY_GUARDS_COUNT)
@@ -167,6 +175,10 @@ void Faculty::addFacultyGuard(const FacultyGuard &facultyGuard)
   facultyGuards[facultyGuardsCount++] = facultyGuard;
 }
 
+/** @brief Function which adds a new speciality to current faculty.
+ *
+ * @param speciality is the speciality to be added to current faculty
+ */
 void Faculty::addSpeciality(const Speciality &speciality)
 {
   if (specialitiesCount + 1 > MAX_SPECIALITIES_COUNT)
@@ -178,6 +190,10 @@ void Faculty::addSpeciality(const Speciality &speciality)
   specialities[specialitiesCount++] = speciality;
 }
 
+/** @brief Function which removes choosen lecturer from the current faculty.
+ *
+ * @param lecturerName is the name of the lecturer to be removed from the current faculty
+ */
 void Faculty::removeLecturer(const char* lecturerName)
 {
   for (int lecturerIndex = 0; lecturerIndex < lecturersCount; lecturerIndex++)
@@ -193,6 +209,10 @@ void Faculty::removeLecturer(const char* lecturerName)
   cerr << "Error ! There is no lecturer named " << lecturerName << " !" << endl;
 }
 
+/** @brief Function which removes choosen faculty guard from the current faculty.
+ *
+ * @param facultyGuardName is the name of the faculty guard to be removed from the current faculty
+ */
 void Faculty::removeFacultyGuard(const char* facultyGuardName)
 {
   for (int facultyGuardIndex = 0; facultyGuardIndex < facultyGuardsCount; facultyGuardIndex++)
@@ -208,6 +228,10 @@ void Faculty::removeFacultyGuard(const char* facultyGuardName)
   cerr << "Error ! There is no faculty guard named " << facultyGuardName << " !" << endl;
 }
 
+/** @brief Function which removes choosen speciality from the current faculty.
+ *
+ * @param specialityName is the name of the speciality to be removed from the current faculty
+ */
 void Faculty::removeSpeciality(const char* specialityName)
 {
   for (int specialityIndex = 0; specialityIndex < specialitiesCount; specialityIndex++)

@@ -21,10 +21,12 @@ public:
   void setExperience(int);
 
   int calculateAge() const;
+  /// Virtual function which increases employee's salary properly depending on the position of the employee.
   virtual void increaseAnnualSalary() = 0;
 
 protected:
   double salary;
+  /// Copy the content of one string to another.
   void copyDynamicMemoryString(char*&, const char*);
 
 private:

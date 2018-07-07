@@ -7,6 +7,7 @@
 using namespace std;
 
 const int STARTING_YEAR = 1900;
+/// The following constants are needed only for the creation of default object in the default constructor.
 const int DEFAULT_NAME_LENGTH = 12;
 const int DEFAULT_ADDRESS_LENGTH = 6;
 const char DEFAULT_EMPLOYEE_NAME[DEFAULT_NAME_LENGTH] = { 'I', 'v', 'a', 'n', ' ' , 'I', 'v', 'a', 'n', 'o', 'v', '\0' };
@@ -111,9 +112,20 @@ void Employee::setExperience(int experience)
   this->experience = experience;
 }
 
+/** @brief Function which calculates age of the employee.
+ *
+ * @return The calculated age
+ */
 int Employee::calculateAge() const
 {
   return getCurrentYear() - birthYear;
+}
+
+void Employee::copyDynamicMemoryString(char* &destinationString, const char* sourceString)
+{
+  destinationString = new char[strlen(sourceString)];
+  assert(destinationString != NULL);
+  strcpy(destinationString, sourceString);
 }
 
 void Employee::copyEmployee(const Employee &otherEmployee)
@@ -129,13 +141,6 @@ void Employee::deleteEmployee()
 {
   delete name;
   delete address;
-}
-
-void Employee::copyDynamicMemoryString(char* &destinationString, const char* sourceString)
-{
-  destinationString = new char[strlen(sourceString)];
-  assert(destinationString != NULL);
-  strcpy(destinationString, sourceString);
 }
 
 int Employee::getCurrentYear() const

@@ -110,6 +110,10 @@ void University::setRectorName(const char* rectorName)
   copyDynamicMemoryString(this->rectorName, rectorName);
 }
 
+/** @brief Function which adds faculty to the current university.
+ *
+ * @param faculty is the faculty which is going to be added to the current university
+ */
 void University::addFaculty(const Faculty &faculty)
 {
   if (facultiesCount + 1 > maximalFacultiesCount)
@@ -119,6 +123,10 @@ void University::addFaculty(const Faculty &faculty)
   faculties[facultiesCount++] = faculty;
 }
 
+/** @brief Function which removes faculty from the current university.
+ *
+ * @param facultyName is the name of the faculty which is going to be removed from the current university
+ */
 void University::removeFaculty(const char* facultyName)
 {
   for (int facultyIndex = 0; facultyIndex < facultiesCount; facultyIndex++)

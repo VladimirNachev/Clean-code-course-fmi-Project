@@ -91,6 +91,7 @@ void Employee::setName(const char* name)
     return;
   }
 
+  delete this->name;
   copyDynamicMemoryString(this->name, name);
 }
 

@@ -1,5 +1,6 @@
 #include "../include/catch.hpp"
 #include "../include/speciality.h"
+#include "../include/commonFunctions.h"
 #include<cstring>
 #include<string>
 #include<cassert>
@@ -7,27 +8,6 @@
 using namespace std;
 
 int defaultDisciplinesCount = 7;
-
-void createDisciplines(int disciplinesCount, char** &disciplines, char disciplinesHandyRepresentation[][64])
-{
-  disciplines = new char*[disciplinesCount];
-  assert(disciplines != NULL);
-  for (int i = 0; i < disciplinesCount; i++)
-  {
-    disciplines[i] = new char[8];
-    assert(disciplines[i] != NULL);
-    strcpy(disciplines[i], disciplinesHandyRepresentation[i]);
-  }
-}
-
-void deleteExistingDisciplines(int disciplinesCount, char** disciplines)
-{
-  for (int i = 0; i < disciplinesCount; i++)
-  {
-    delete disciplines[i];
-  }
-  delete disciplines;
-}
 
 Speciality createSpeciality(int &disciplinesCount = defaultDisciplinesCount)
 {
@@ -37,7 +17,7 @@ Speciality createSpeciality(int &disciplinesCount = defaultDisciplinesCount)
   char** disciplines;
   createDisciplines(disciplinesCount, disciplines, disciplinesHandyRepresentation);
   Speciality speciality("Computer Science", enrolledPeopleMaxCount, disciplinesCount, disciplines);
-  deleteExistingDisciplines(disciplinesCount, disciplines);
+  deleteDisciplines(disciplinesCount, disciplines);
   return speciality;
 }
 

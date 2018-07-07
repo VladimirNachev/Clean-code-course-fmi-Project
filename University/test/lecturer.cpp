@@ -1,5 +1,6 @@
 #include "../include/catch.hpp"
 #include "../include/lecturer.h"
+#include "../include/commonFunctions.h"
 #include<cstring>
 #include<cassert>
 
@@ -7,11 +8,6 @@ TEST_CASE("Lecturer class - lecturer can be created")
 {
   Lecturer lecturer("Georgi Georgiev", "Sofia", 1978, 28, 1365.79, "Professor");
   REQUIRE(strcmp(lecturer.getName(), "Georgi Georgiev") == 0);
-}
-
-bool areEqual(double firstNumber, double secondNumber)
-{
-  return firstNumber - secondNumber > -0.0001 && firstNumber - secondNumber < 0.0001;
 }
 
 TEST_CASE("Lecturer class - lecturer's salary can be annually increased")
@@ -22,7 +18,7 @@ TEST_CASE("Lecturer class - lecturer's salary can be annually increased")
   lecturer.increaseAnnualSalary();
   const double salaryAfterIncrease = lecturer.getSalary();
   const double expectedSalary = salaryBeforeIncrease + LECTURER_ANNUAL_SALARY_INCREASE;
-  REQUIRE(areEqual(salaryAfterIncrease, expectedSalary));
+  REQUIRE(areNumbersEqual(salaryAfterIncrease, expectedSalary));
 }
 
 void initializeOldLecturersRank(char*& oldLecturersRank, const Lecturer &lecturer)

@@ -38,16 +38,19 @@
 		<Unit filename="include/facultyGuard.h" />
 		<Unit filename="include/lecturer.h" />
 		<Unit filename="include/speciality.h" />
+		<Unit filename="include/university.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/employee.cpp" />
 		<Unit filename="src/faculty.cpp" />
 		<Unit filename="src/facultyGuard.cpp" />
 		<Unit filename="src/lecturer.cpp" />
 		<Unit filename="src/speciality.cpp" />
+		<Unit filename="src/university.cpp" />
 		<Unit filename="test/faculty.cpp" />
 		<Unit filename="test/facultyGuard.cpp" />
 		<Unit filename="test/lecturer.cpp" />
 		<Unit filename="test/speciality.cpp" />
+		<Unit filename="test/university.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

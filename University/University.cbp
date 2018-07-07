@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/catch.hpp" />
+		<Unit filename="include/commonFunctions.h" />
 		<Unit filename="include/employee.h" />
 		<Unit filename="include/faculty.h" />
 		<Unit filename="include/facultyGuard.h" />
@@ -40,6 +41,7 @@
 		<Unit filename="include/speciality.h" />
 		<Unit filename="include/university.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/commonFunctions.cpp" />
 		<Unit filename="src/employee.cpp" />
 		<Unit filename="src/faculty.cpp" />
 		<Unit filename="src/facultyGuard.cpp" />

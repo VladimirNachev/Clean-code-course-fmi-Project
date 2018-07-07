@@ -20,6 +20,15 @@ void createDisciplines(int disciplinesCount, char** &disciplines, char disciplin
   }
 }
 
+void deleteExistingDisciplines(int disciplinesCount, char** disciplines)
+{
+  for (int i = 0; i < disciplinesCount; i++)
+  {
+    delete disciplines[i];
+  }
+  delete disciplines;
+}
+
 Speciality createSpeciality(int &disciplinesCount = defaultDisciplinesCount)
 {
   char disciplinesHandyRepresentation[8][64] = { "UP", "OOP", "SDP", "DAA", "DIS", "OS", "FP",  '\0' };
@@ -27,7 +36,9 @@ Speciality createSpeciality(int &disciplinesCount = defaultDisciplinesCount)
   disciplinesCount = 7;
   char** disciplines;
   createDisciplines(disciplinesCount, disciplines, disciplinesHandyRepresentation);
-  return Speciality("Computer Science", enrolledPeopleMaxCount, disciplinesCount, disciplines);
+  Speciality speciality("Computer Science", enrolledPeopleMaxCount, disciplinesCount, disciplines);
+  deleteExistingDisciplines(disciplinesCount, disciplines);
+  return speciality;
 }
 
 TEST_CASE("Speciality class - speciality can be created")

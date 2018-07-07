@@ -1,0 +1,25 @@
+var class_faculty =
+[
+    [ "Faculty", "class_faculty.html#a1c3f6a0eefcd4aee451e8c1db8e658fc", null ],
+    [ "Faculty", "class_faculty.html#a73b63fab5937b7e583dbf743c0824709", null ],
+    [ "Faculty", "class_faculty.html#a64abbfa4ae1c2aada01cbe2166cad6b8", null ],
+    [ "~Faculty", "class_faculty.html#ace9ed6a960bd1e1a07a4344ed63bdaf3", null ],
+    [ "addFacultyGuard", "class_faculty.html#a7972c0913b8d423606560e4676746f76", null ],
+    [ "addLecturer", "class_faculty.html#ae4850dbabd1958ffe806f0d7e4531d6f", null ],
+    [ "addSpeciality", "class_faculty.html#a4e4d0b8e5bf8c16e5a76fe230faf75c5", null ],
+    [ "getFacultyGuards", "class_faculty.html#a985e70cbb2cf021a1c15be62db3d1aac", null ],
+    [ "getFacultyGuardsCount", "class_faculty.html#a783f085357c3f22a87e2067fdb5db777", null ],
+    [ "getLecturers", "class_faculty.html#aac64ab13e7dcad9f5740fb016472d9e6", null ],
+    [ "getLecturersCount", "class_faculty.html#ab849088376e0d7891b015f7009d4ee78", null ],
+    [ "getName", "class_faculty.html#a133bd70600d5280e7061b9c7ef56ebd1", null ],
+    [ "getSpecialities", "class_faculty.html#a600a59636a36aa36391a382b84b5bb7b", null ],
+    [ "getSpecialitiesCount", "class_faculty.html#a41d0586a43868c99aa0179d2386955e8", null ],
+    [ "operator=", "class_faculty.html#a08a2be08c25a7de85e26d71fd426c772", null ],
+    [ "removeFacultyGuard", "class_faculty.html#a72c37b5b013c5ae3fcb5e5f3272e8673", null ],
+    [ "removeLecturer", "class_faculty.html#a6ac255b33665f3f6d308f281e0e3f8a1", null ],
+    [ "removeSpeciality", "class_faculty.html#abbb62123d3d023e80324f8e460bb04b3", null ],
+    [ "setFacultyGuards", "class_faculty.html#a45514cd69113256671b55aa1f4768b10", null ],
+    [ "setLecturers", "class_faculty.html#a91b40c5d28ef9968306461e2636d436d", null ],
+    [ "setName", "class_faculty.html#a147d14c7af8a2f7f01583b4d74b2fc27", null ],
+    [ "setSpecialities", "class_faculty.html#af851f4299ec550220b04cc97a1bd897c", null ]
+];
